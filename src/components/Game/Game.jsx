@@ -33,9 +33,13 @@ const Game = () => {
         if(numbOfRightGuessCards >= numbOfCorrectCards - 1) {
             setGameStatus('finished')
             setIsVictory(true)
-        }
-        if(guessedCard) {
+        } else if(guessedCard) {
             setNumbOfRightGuessCards(numbOfRightGuessCards + 1)
+            const index = arrCorrectCards.indexOf(card)
+            arrCorrectCards.splice(index, 1)
+            console.log(index)
+            console.log(arrCorrectCards);
+            
         } else {
             setGameStatus('finished')
             setIsVictory(false)
@@ -52,13 +56,15 @@ const Game = () => {
         setDisabled(true)
         gameStart()
     }
+    // todo: сделать короче чтобы когда чувак тыкал на правильную карточку
+    // из массива правильных карточек она удалялась
 
     const changeClassName = () => {
         setTimeout(() => {
             setCorrectCardClassName(s.card)
             setDisabled(false)
         },
-        2000)
+        1000)
     }
     
 
