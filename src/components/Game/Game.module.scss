@@ -1,0 +1,111 @@
+@import '../../style/mixins.scss';
+
+.game {
+    padding: 10px;
+}
+.gameContainer {
+    padding: 10px;
+    max-width: 950px;
+    max-height: 950px;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    @include _979 {
+        max-width: 768px;
+        max-height: 768px;
+        grid-gap: 8px;
+    }
+    @include _768 {
+        max-width: 660px;
+        max-height: 820px;
+        column-gap: 8px;
+        row-gap: 20px;
+    }
+    @include _640 {
+        max-width: 480px;
+        column-gap: 6px;
+        grid-template-columns: repeat(7, 1fr);
+    }
+    @include _480 {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 390px;
+    }
+}
+.card {
+    width: 107px;
+    height: 107px;
+    border-radius: 20px;
+    background: gray;
+    @include _979 {
+        width: 87px;
+        height: 87px;
+    }
+    @include _768 {
+        width: 68px;
+        height: 68px;
+    }
+    @include _640 {
+        width: 58px;
+        height: 58px;
+    }
+    @include _480 {
+        width: 53px;
+        height: 53px;
+    }
+}
+.correctCard {
+    width: 107px;
+    height: 107px;
+    border-radius: 20px;
+    background: greenyellow;
+    @include _979 {
+        width: 87px;
+        height: 87px;
+    }
+    @include _768 {
+        width: 68px;
+        height: 68px;
+    }
+    @include _640 {
+        width: 58px;
+        height: 58px;
+    }
+    @include _480 {
+        width: 53px;
+        height: 53px;
+    }
+}
+.start {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 50;
+    background-color: green;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+.result {
+    color: white;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    display: flex;
+    flex-direction: column;
+    span {
+        font-size: 30px;
+    }
+    .restart {
+        font-size: 20px;
+        color: azure;
+        padding: 30px 60px;
+        background-color: red;
+        border-radius: 20px;
+    }
+}

@@ -1,0 +1,38 @@
+// media-mixins
+@mixin _1170 {
+    @media (max-width: 1170px){
+        @content;
+    }
+}
+@mixin _979 {
+    @media (max-width: 979px){
+        @content;
+    }
+}
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+@mixin _640 {
+    @media (max-width: 640px){
+        @content;
+    }
+}
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+@mixin _350{
+    @media (max-width: 350px){
+        @content;
+    }
+}
+
+@mixin defaultPage {
+    padding: 40px 0px 0px 60px;
+    background-color: #363636;
+    min-width: 100%;
+    min-height: 100vh;
+}
